@@ -1,0 +1,78 @@
+package controle;
+
+import visualisacao.EntradaSaida;
+
+public class controladora {
+
+	public void exibeMenu() {
+		int opcao;
+
+		// Escolha desafio Target
+
+		do {
+
+			opcao = EntradaSaida.solicitaOpcao();
+			switch (opcao) {
+			// Desafio 01
+			case 0:
+				int indice = 13;
+				int soma = 0;
+				int k = 0;
+
+				for (int i = 0; i < 13; i++) {
+					k += 1;
+					soma += k;
+				}
+
+				EntradaSaida.resultadoDesafioUm(soma);
+				break;
+			// Desafio 02
+			case 1:
+				int limite = EntradaSaida.solicitaValor();
+				double fibonachi[] = new double[limite];
+				Boolean validaFibo = false;
+				for (int i = 0; i < limite; i++) {
+
+					if (i <= 1) {
+						fibonachi[i] = 1;
+					} else {
+						fibonachi[i] = fibonachi[i - 1] + fibonachi[i - 2];
+					}
+				}
+
+				for (int i = 0; i < limite; i++) {
+					if (fibonachi[i] == limite) {
+						validaFibo = true;
+					}
+				}
+
+				if (validaFibo == true) {
+					EntradaSaida.resultadoDesafioDoisTrue(limite);
+				}else {
+					EntradaSaida.resultadoDesafioDoisFalse(limite);
+				}
+
+				break;
+
+			case 2:
+				String palavra =EntradaSaida.solicitaString();
+				char destino[]=palavra.toCharArray();
+				int tamanho = destino.length;
+				char novaPalavra[] = new char [tamanho];
+				for( int i = 0; i<tamanho; i--) {
+					novaPalavra[i]=destino[(tamanho-i)];
+				}
+				
+				System.out.print(destino[0]);
+				
+				System.out.print(novaPalavra[tamanho]);
+			}
+
+		} while (opcao != 3);
+
+		EntradaSaida.exibeMsgEncerraPrograma();
+	}
+
+	
+
+}

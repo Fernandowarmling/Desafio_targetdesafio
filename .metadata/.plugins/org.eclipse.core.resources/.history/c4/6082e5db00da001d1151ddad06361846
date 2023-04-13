@@ -1,0 +1,31 @@
+package visualisacao;
+
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
+
+public class EntradaSaida {
+	
+	
+	public static int solicitaOpcao() {
+		
+		String[] opcoes = { "Desafio 01", "Desafio 02","Desafio 03","Desafio 04","Desafio 05","Sair do Sistema"};
+		JComboBox<String> menu= new JComboBox<String>(opcoes);
+		JOptionPane.showConfirmDialog(null, menu, "Informe o desafio a ser conferido", JOptionPane.OK_CANCEL_OPTION);
+		return menu.getSelectedIndex();
+	}
+
+	public static void exibeMsgEncerraPrograma() {
+		JOptionPane.showMessageDialog(null, "O programasa sera encerrado");
+		
+	}
+
+	
+	public static void resultadoDesafioUm(int soma) {
+		int resultado= soma;
+		JOptionPane.showInputDialog("O resultado da some é: " + soma)
+		
+	}
+	
+
+}

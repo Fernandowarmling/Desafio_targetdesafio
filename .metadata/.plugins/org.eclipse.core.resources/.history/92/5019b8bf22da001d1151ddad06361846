@@ -1,0 +1,46 @@
+package visualisacao;
+
+import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
+
+public class EntradaSaida {
+
+	public static int solicitaOpcao() {
+
+		String[] opcoes = { "Desafio 01", "Desafio 02","Desafio 05","Sair do Sistema" };
+		JComboBox<String> menu = new JComboBox<String>(opcoes);
+
+		JOptionPane.showConfirmDialog(null, menu, "Selecione o desafio desejado ", JOptionPane.DEFAULT_OPTION);
+		return menu.getSelectedIndex();
+	}
+
+	public static void exibeMsgEncerraPrograma() {
+		JOptionPane.showMessageDialog(null, "O programasa sera encerrado");
+
+	}
+
+	public static void resultadoDesafioUm(int soma) {
+		// int resultado= soma;
+		JOptionPane.showMessageDialog(null, "O resultado da soma é: " + soma);
+
+	}
+
+	public static void resultadoDesafioDoisFalse(int limite) {
+		JOptionPane.showMessageDialog(null, limite + " não é um numero fibonacci");
+
+	}
+
+	public static void resultadoDesafioDoisTrue(int limite) {
+		JOptionPane.showMessageDialog(null, limite + " é um numero fibonacci");
+	}
+
+	public static int solicitaValor() {
+		int valor = Integer.parseInt(JOptionPane.showInputDialog("Este valor é fibonacci"));
+		return valor;
+	}
+	
+	public static int solicitaString() {
+		String palavra = JOptionPane.showInputDialog("Digite a palavra a ser invertida");
+		return palavra;
+
+}

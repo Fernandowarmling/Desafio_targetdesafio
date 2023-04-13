@@ -1,0 +1,19 @@
+package visualisacao;
+
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
+
+public class EntradaSaida {
+	
+	
+	public static int solicitaOpcao() {
+		
+		String[] opcoes = { "Dafio 01", "Desafio 02","Desafio 03","Desafio 04","Desafio 05"};
+		JComboBox<String> menu= new JComboBox<String>(opcoes);
+		JOptionPane.showConfirmDialog(null, menu, "Informe o desafio a ser conferido", JOptionPane.OK_CANCEL_OPTION);
+		return menu.getSelectedIndex();
+	}
+	
+
+}

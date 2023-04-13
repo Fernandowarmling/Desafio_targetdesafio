@@ -1,0 +1,13 @@
+import controle.controladora;
+
+public class principal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		controladora controladora = new controladora();
+		controladora.exibeMenu();
+
+	}
+
+}
